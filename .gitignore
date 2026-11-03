@@ -1,36 +1,93 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# C extensions
+*.so
 
-# testing
-/coverage
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# next.js
-/.next/
-/out/
+# PyInstaller
+*.manifest
+*.spec
 
-# production
-/build
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# misc
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE / Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
 .DS_Store
-*.pem
 
-# debug
+# Node / Frontend (for future frontend)
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# local env files
-.env*.local
-.env
+# Database & local data
+*.sqlite3
+*.db
 
-# vercel
-.vercel
+# Temporary logs & uploads
+logs/
+*.log
+uploads/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Model weights & large checkpoints (>100MB)
+*.pkl
+!ai/models/.gitkeep
+
+# Firebase Credentials & Service Accounts
+*firebase*.json
+*serviceAccount*.json
+serviceAccountKey.json
+secrets/

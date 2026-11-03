@@ -1,0 +1,1 @@
+"""EcoSense FastAPI Application Package."""

@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --eco-primary: #10b981;
+    --eco-dark: #047857;
+    --sun-accent: #f59e0b;
+    --ocean-accent: #0ea5e9;
+    --coral-accent: #f43f5e;
+  }
+
+  body {
+    @apply bg-[#F8FAFC] text-slate-800 antialiased font-sans min-h-screen selection:bg-eco-200 selection:text-eco-900;
+  }
+}
+
+@layer components {
+  /* 3D Duolingo-style Gamified Button */
+  .btn-3d {
+    @apply relative inline-flex items-center justify-center font-bold transition-all duration-100 select-none cursor-pointer rounded-2xl active:translate-y-1;
+  }
+
+  .btn-3d-green {
+    @apply bg-eco-500 hover:bg-eco-600 text-white shadow-3d-green active:shadow-3d-green-pressed border-b-2 border-eco-700;
+  }
+
+  .btn-3d-yellow {
+    @apply bg-sun-500 hover:bg-sun-600 text-slate-900 shadow-3d-yellow active:shadow-3d-yellow-pressed border-b-2 border-sun-700;
+  }
+
+  .btn-3d-blue {
+    @apply bg-ocean-500 hover:bg-ocean-600 text-white shadow-3d-blue active:shadow-3d-blue-pressed border-b-2 border-ocean-700;
+  }
+
+  .btn-3d-coral {
+    @apply bg-coral-500 hover:bg-coral-600 text-white shadow-3d-coral active:shadow-3d-coral-pressed border-b-2 border-coral-700;
+  }
+
+  .btn-3d-white {
+    @apply bg-white hover:bg-slate-50 text-slate-700 shadow-3d-slate active:shadow-3d-slate-pressed border border-slate-200 border-b-4 border-b-slate-300;
+  }
+
+  .btn-3d-ghost {
+    @apply bg-transparent hover:bg-slate-100 text-slate-600 active:bg-slate-200 rounded-2xl;
+  }
+
+  /* Playful Gamified Cards */
+  .eco-card {
+    @apply bg-white rounded-3xl p-6 shadow-soft-card border border-slate-100 transition-all duration-200 hover:shadow-soft-lg;
+  }
+
+  .eco-card-interactive {
+    @apply eco-card cursor-pointer hover:-translate-y-1 hover:border-eco-200 active:translate-y-0;
+  }
+
+  .eco-card-highlight {
+    @apply bg-gradient-to-br from-eco-50 via-white to-emerald-50/40 border-2 border-eco-200 rounded-3xl p-6 shadow-soft-card;
+  }
+
+  .eco-card-sun {
+    @apply bg-gradient-to-br from-sun-50 via-white to-amber-50/40 border-2 border-sun-200 rounded-3xl p-6 shadow-soft-card;
+  }
+
+  .eco-card-ocean {
+    @apply bg-gradient-to-br from-ocean-50 via-white to-sky-50/40 border-2 border-ocean-200 rounded-3xl p-6 shadow-soft-card;
+  }
+
+  /* Gamified Points Badge */
+  .points-badge {
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sun-100 border border-sun-300 text-sun-800 font-extrabold text-sm shadow-sm;
+  }
+
+  .streak-badge {
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-orange-100 border border-orange-300 text-orange-800 font-extrabold text-sm shadow-sm;
+  }
+
+  /* Rounded Progress Bar */
+  .eco-progress-track {
+    @apply w-full bg-slate-100 rounded-full h-3.5 overflow-hidden p-0.5 border border-slate-200/80;
+  }
+
+  .eco-progress-fill {
+    @apply h-full rounded-full transition-all duration-500 bg-gradient-to-r from-eco-400 to-eco-500 shadow-sm;
+  }
+}
+
+/* Custom Scrollbar for Smooth Look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
