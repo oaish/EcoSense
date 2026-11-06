@@ -83,7 +83,7 @@ logs/
 uploads/
 
 # Model weights & large checkpoints (>100MB)
-*.pkl
+
 !ai/models/.gitkeep
 
 # Firebase Credentials & Service Accounts
